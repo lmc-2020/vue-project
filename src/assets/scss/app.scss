@@ -1,0 +1,190 @@
+#app {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+#nav {
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+
+  .left-menu {
+    position: fixed;
+
+    .el-menu-vertical-demo {
+      height: 100vh;
+      border: none;
+
+      &:not(.el-menu--collapse) {
+        width: 200px;
+      }
+    }
+  }
+
+  .right-content {
+    width: calc(100% - 200px);
+    min-height: 100vh;
+    margin-left: 200px;
+    // box-sizing: border-box;
+    background: #eee;
+    transition: all 0.3s linear;
+
+    &.is-close {
+      width: calc(100% - 64px);
+      margin-left: 64px;
+    }
+
+    .top-item {
+      height: 50px;
+      padding: 18px 30px 18px 20px;
+      font-size: 12px;
+      top: 0;
+      position: sticky;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      background: #fff;
+      box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24),
+        0 0 2px rgba(10, 16, 20, 0.12);
+
+      .el-avatar.el-avatar--medium {
+        margin-top: -10px;
+        vertical-align: middle;
+      }
+
+      .el-dropdown-selfdefine {
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #409eff;
+        }
+      }
+
+      .el-badge.item {
+        margin-top: -5px;
+        margin-right: 15px;
+      }
+
+      .top-left-item {
+        display: flex;
+
+        .el-icon-s-fold,
+        .el-icon-s-unfold {
+          font-size: 20px;
+          margin-top: -3px;
+          margin-right: 10px;
+          cursor: pointer;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: #409eff;
+          }
+        }
+      }
+    }
+
+    .content {
+      padding: 10px;
+      position: relative;
+    }
+  }
+}
+
+.login-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./assets/image/loginbak.jpg");
+  background-size: 100% 100%;
+
+  .form-box {
+    width: 350px;
+    padding: 25px 40px 10px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    border: 1px solid #eee;
+    box-shadow: 0 8px 8px rgba(44, 44, 44, 0.5), 0 0 8px rgba(5, 141, 232, 0.5);
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: #fff;
+      width: calc(100% - 2px);
+      left: 1px;
+      top: calc(100% + 1px);
+      height: 2px;
+      border-bottom: 1px solid #eee;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #fff;
+      width: calc(100% - 4px);
+      left: 2px;
+      top: calc(100% + 4px);
+      height: 2px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .el-input__inner,
+    .el-button {
+      border-radius: 0;
+    }
+
+    .el-form-item--mini.el-form-item {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.content-card {
+  min-height: calc(100vh - 92px);
+  padding: 10px;
+}
+
+/*路由跳转动画*/
+#app {
+  .slide-scale-enter-active,
+  .slide-scale-leave-active {
+    width: calc(100% - 20px);
+    will-change: transform opacity;
+    transition: all 500ms;
+    position: absolute;
+  }
+  
+  .slide-scale-enter {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  
+  .slide-scale-enter-to {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .slide-scale-leave-to {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}

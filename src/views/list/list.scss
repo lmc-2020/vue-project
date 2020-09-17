@@ -1,0 +1,19 @@
+#list {
+  .content-card {
+    min-height: calc(100vh - 132px);
+    padding: 10px 10px 50px;
+    position: relative;
+
+    .el-pagination {
+      position: absolute;
+      bottom: 10px;
+      right: 30px;
+    }
+  }
+}
+
+#list-template {
+  .el-row + .el-row {
+    margin-top: 10px;
+  }
+}
