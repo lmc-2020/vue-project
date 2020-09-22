@@ -5,6 +5,6 @@
 
 一个vue4+element2的项目。
 
-[项目预览](https://lmc-2020.github.io/vue-project/pages/index.html)
+[项目预览](https://liu-maocheng.gitee.io/vue-project)
 
 所有的列表数据都是mock.js模拟获取的，所以项目预览里列表都没有数据，在本地环境能正常显示。
